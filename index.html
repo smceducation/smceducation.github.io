@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <style>
+
+  body {
+    position: relative;
+    font-family: Montserrat, sans-serif;;
+    color: #555;
+  }
+
+  a:link {
+    color: purple;
+    text-decoration: none;
+  }
+
+  a:visited {
+  color: red;
+  }
+
+  .panel-footer.panel-custom {
+    background: rgb(91, 76, 135);
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .scrollspy-example {
+    position: relative;
+    height: 250px;
+    overflow: auto;
+  }
+
+  .navbar-default {
+    font-family: Montserrat, sans-serif;
+    background-color: rgb(91, 76, 135);
+    letter-spacing: 2px;
+  }
+
+  .custom-toggler.navbar-toggler {
+    border-color: rgb(91, 76, 135);
+  }
+
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-default .nav-pills .nav-link {
+      color: white;
+      border-radius: 0px;
+      line-height: 40px;
+      height: 60px
+  }
+
+  .navbar-default .nav-pills li a:hover, .navbar-default .nav-pills .nav-link.active {
+    color: rgb(91, 76, 135) !important;
+    background-color: #fff !important;
+  }
+
+  .register {
+    background: white;
+    line-height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(91, 76, 135);
+  }
+
+  .sticky.is-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .card-header {
+    background: rgb(91, 76, 135);
+    color: white;
+    height: 175px;
+  }
+
+  .card-footer {
+    background: rgb(91, 76, 135);
+    color: white;
+    height: 250px;
+  }
+
+  .card-footer-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .card-title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .event-footer {
+    background: rgb(91, 76, 135);
+    color: white;
+  }
+
+  .pagetitle {
+    position: relative;
+    float: left;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(91, 76, 135);
+  }
+
+  .date_btn{
+    height: 50px;
+    line-height: 50px;
+    border-color: white;
+    background: rgb(91, 76, 135);
+    color:white;
+  }
+
+  .date_link{
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    margin:0;
+  }
+
+  .call_link{
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 54px;
+    width:100%;
+    margin:0;
+  }
+
+  .call-title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+  }
+
+  .call-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+  }
+
+  .connection-line {
+    width:100%;
+    height:25px;
+	  background: linear-gradient(to right,
+	                              transparent 0%,
+	                              transparent calc(50% - 1.51px),
+	                              rgb(218, 101, 78)    calc(50% - 1.5px),
+	                             rgb(218, 101, 78)  calc(50% + 1.5px),
+	                              transparent calc(50% + 1.51px),
+	                              transparent 100%);
+	}
+
+  .time_btn{
+    min-height: 50px;
+    border-color: white;
+    background: rgb(91, 76, 135);
+    color:white;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+  }
+
+  .time_btn p{
+    margin: 0px;
+  }
+
+  .nav-pills li a:hover, .nav-pills .nav-link.active {
+    color: white;
+    background: gold;
+  }
+
+  .nav-pills .nav-link {
+    height: 50px;
+    background: rgb(91, 76, 135);
+    color:white;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+
+</style>
+
+</head>
+<body data-spy="scroll" data-target="#spy" data-offset="200" >
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-default fixed-top"  style="height:60px; padding-top:0; padding-bottom:0;">
+
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Logo" style="width:100px;">
+      </a>
+
+      <a href="#" class="mr-auto">
+        <div class="register">
+          Register!
+        </div>
+      </a>
+
+
+      <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" style="height:40px; padding:0">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="spy" class="navbar-collapse collapse flex-grow-0">
+          <ul class="nav nav-pills ml-auto nav-fill">
+            <li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
+            <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+            <li class="nav-item"><a class="nav-link" href="#venues">Venues</a></li>
+          </ul>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid">
+      <div class="col-sm-12" style="background: white; height: 65px"></div>
+      <div id="CFS" class="carousel slide" data-ride="carousel">
+        <div class="row" style="padding-left:15px;padding-right:15px">
+          <div class="col-12 col-md">
+            <div class="row">
+              <div class="col-sm-12 text-center" style="background: rgb(91, 76, 135); height: 100px; border-radius: 5px 0px 0px 0px">
+                <h1 class="call-title"><b>Call for Submissions!</b></h1>
+              </div>
+              <nav id="CFS-indicater" class="nav flex-column col-sm-12" style="padding:0">
+                <a data-target="#CFS" href="#" data-slide-to="0" class="call-link active" onmouseover="click();" style="padding:0">
+                  <div class="col-sm-12 text-center" style="background: rgb(97, 165, 231)">
+                    <h6 style="line-height: 40px; color: white ; margin:0;"><b>100 years of the theramin</b></h6>
+                  </div>
+                </a>
+                <a data-target="#CFS" href="#" data-slide-to="1" class="call-link" onmouseover="click();" style="padding:0">
+                  <div class="col-sm-12 text-center" style="background: rgb(240, 224, 74)">
+                    <h6 style="line-height: 40px; color: white ; padding:0; margin:0;"><b>Queen tribute concert</b></h6>
+                  </div>
+                </a>
+                <a data-target="#CFS" href="#" data-slide-to="2" class="call-link" onmouseover="click();" style="padding:0">
+                  <div class="col-sm-12 text-center" style="background: rgb(213, 96, 73)">
+                    <h6 style="line-height: 40px; color: white ; padding:0; margin:0;"><b>Installations at AAU campus</b></h6>
+                  </div>
+                </a>
+                <a data-target="#CFS" href="#" data-slide-to="3" class="call-link" onmouseover="click();" style="padding:0">
+                  <div class="col-sm-12 text-center" style="background: rgb(198, 225, 76)">
+                    <h6 style="line-height: 40px; color: white ; padding:0; margin:0;"><b>Sonic or visual navigation at AAU campus</b></h6>
+                  </div>
+                </a>
+                <a data-target="#CFS" href="#" data-slide-to="4" class="call-link" onmouseover="click();" style="padding:0">
+                  <div class="col-sm-12 text-center" style="background: rgb(200, 101, 192)">
+                    <h6 style="line-height: 40px; color: white ; padding:0; margin:0;"><b>Open submissions</b></h6>
+                  </div>
+                </a>
+              </nav>
+            </div>
+          </div>
+          <div class="carousel-inner col ml-auto text-center">
+            <div class="carousel-item active" id="hundred">
+              <div class="row" style="position: relative; height:300px; overflow-y: scroll;">
+                <div class="col-12" style="background: rgb(92, 160, 226); border-radius: 0px 5px 5px 0px">
+                  <h1 style="color: white; margin-top:20px"><b>100 years of the theramin</b></h1>
+                  <p style="color: white ">
+                    2019 marks the 100th anniversary of the theremin, and we celebrate this by inviting Dorit Chrysler to Copenhagen for a concert and a workshop.
+                    <br /><br />
+                    We ask anyone to contribute in the celebration with talks or workshops that explore the history of the theremin and/or its impact on electronic music.
+                    <br /><br />
+                    Contact: <a href="mailto:queensfestival@create.aau.dk" target="_top" style="color:rgb(91, 76, 135)">queensfestival@create.aau.dk</a>
+                    <br /><br />
+                    Deadline: December 15th 2018
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" id="QTrib">
+              <div class="row" style="position: relative; height:300px; overflow-y: scroll">
+                <div class="col-12" style="background: rgb(235, 219, 69); border-radius: 0px 5px 5px 0px">
+                  <h1 style="color: white ; margin-top:20px"><b>Queen tribute concert</b></h1>
+                  <p style="color: white ;">
+                    Let’s cover some Queen! On the final day of the festival, we want anyone musically inclined to channel their inner Freddie Mercury.
+                    <br /><br />
+                    We hope to see music created with physical modeling, self made instruments, real world sampling, audience participation, interesting visuals, etc.
+                    <br /><br />
+                    We only ask that:
+                    <ul class="text-left" style="color:white ; padding-top:0;">
+                      <li>You play songs from the Queen repertoire</li>
+                      <li>You incorporate the spirit of art, science, technology, and digital creativity</li>
+                    </ul>
+                    <p style="color:white ">
+                      If you have the music, but lack the singing (or vice versa), let us know and we’ll try to help with the pairing. Or maybe you just want to contribute with cool visuals? Let us know.
+                      <br /><br />
+                      Contact: <a href="mailto:queensfestival@create.aau.dk" target="_top" style="color:rgb(91, 76, 135)">queensfestival@create.aau.dk</a>
+                      <br /><br />
+                      Deadline: December 15th 2018
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" id="Inst">
+              <div class="row" style="position: relative; height:300px; overflow-y: scroll">
+                <div class="col-12" style="background: rgb(207, 91, 68); border-radius: 0px 5px 5px 0px">
+                  <h1 style="color: white ; margin-top:20px"><b>Installations at AAU campus</b></h1>
+                  <p style="color: white ">
+                    The Aalborg University Copenhagen building has some interesting features that could lend itself to interesting art or technology installations.
+                    <br /><br />
+                    We encourage anyone to submit suggestions to installations with sound, technology, lighting, sensors, projection, etc. that utilise some of the characteristic areas of AAU CPH:
+                    <ul class="text-left" style="color:white ">
+                      <li>We are situated next to the water.</li>
+                      <li>An arched bridge connects the two buildings.</li>
+                      <li>The main entrance has steps flanked by a cascading fountain.</li>
+                      <li>The reception has a spiral staircase and an open space that leads 5 stories up in the air.</li>
+                    </ul>
+                    <p style="color: white">
+                      Contact: <a href="mailto:jwa@create.aau.dk" target="_top" style="color:rgb(91, 76, 135)">queensfestival@create.aau.dk</a>
+                      <br /><br />
+                      Deadline: December 15th 2018
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" id="Sonic">
+              <div class="row" style="position: relative; height:300px; overflow-y: scroll">
+                <div class="col-12" style="background: rgb(193, 220, 71); border-radius: 0px 5px 5px 0px">
+                  <h1 style="color: white ; margin-top:20px"><b>Sonic or visual navigation at AAU campus</b></h1>
+                  <p style="color: white ">
+                    Lead visitors to and from points of interest in the AAU building during the Queens Festival. Create the “trail of breadcrumbs” that will allow visitors to find their way to the workshops, talks, and installations at AAU.
+                    <ul class="text-left" style="color:white ">
+                      <li>The single longest trips will be approximately 75 meters, the shorter ones 10-15 meters. </li>
+                      <li>Preferably, users shouldn’t be required to use a piece of technology (e.g. a smartphone) to receive information on how to go from A to B.</li>
+                    </ul>
+                    <p style="color: white">
+                      Contact: <a href="mailto:queensfestival@create.aau.dk" target="_top" style="color:rgb(91, 76, 135)">queensfestival@create.aau.dk</a>
+                      <br /><br />
+                      Deadline: December 15th 2018
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" id="Open">
+              <div class="row" style="position: relative; height:300px; overflow-y: scroll">
+                <div class="col-12" style="background: rgb(195, 96, 187); border-radius: 0px 5px 5px 0px">
+                  <h1 style="color: white ; margin-top:20px"><b>Open submissions</b></h1>
+                  <p style="color: white ">
+                    We encourage anyone to submit talks or workshops that celebrates digital creativity within the areas of art, science, technology, and sound.
+                    <br /><br />
+                    Contact: <a href="mailto:queensfestival@create.aau.dk" target="_top" style="color:rgb(91, 76, 135)">queensfestival@create.aau.dk</a>
+                    <br /><br />
+                    Deadline: December 15th 2018
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+  <div class="container" style="height: 15px";>  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-3 order-12 order-lg-1">
+        <div class="card text-center" >
+          <img class="card-img-top" src="images/eastn.png" alt="Card image" style="width:100%; max-height: 300px">
+          <div class="card-header">
+            <h3 class="card-title">What is EASTN?</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              The European Art - Science - Technology Network (EASTN) for Digital Creativity is a project that emerged from several European institutions involved in research, technology development, creation and education in the field of technologies applied to artistic creation. At European Level, this network is coordinated by <a href="http://www.acroe-ica.org/en">ACROE</a> (Grenoble, France) and supported by the Culture Program of the European Union since November 2017.
+            </p>
+          </div>
+          <a href="http://www.eastn.eu" style="background: #1B6884; color: white">
+            <div class="card-footer" style="height: 75px">
+              <p class="card-footer-text">Learn more about EASTN</p>
+            </div>
+          </a>
+      </div>
+    </div>
+
+      <div class="col-12 col-sm-6 col-lg-6 order-1 order-sm-1 order-lg-2">
+        <div class="card text-center" style="min-width: 300px">
+          <img class="card-img-top" src="images/jumbo.jpg" alt="Card image" style="width:100%; max-height: 300px">
+          <div class="card-header">
+            <h3 class="card-title" style="line-height:45px">Queens Festival<br>Copenhagen<br>May 12th-16th, 2019</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              The Queens Festival takes place in Copenhagen from the 12th to 16th of May 2019 at Aalborg University Copenhagen. The festival celebrates everything that EASTN-DC is about: art, science, technology, and digital creativity with workshops, art installations, concerts, and theatrical performances.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 order-2 col-lg-3">
+        <div class="card" style="max-height:600px">
+          <a class="twitter-timeline" data-link-color="#981CEB" href="https://twitter.com/Novars_Research?ref_src=twsrc%5Etfw">Tweets by Novars_Research</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div  style="height: 50px; position: relative">  </div>
+
+    <div id="programme" class="container-fluid" style="min-height: 100px; background: rgb(246, 246, 246)">
+      <div  style="height: 100px; position: relative">
+        <h1 class="pagetitle">Programme</h1>
+      </div>
+
+      <div  style="height: 25px"></div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-1"> </div>
+
+          <div class="col-sm-2 text-center" style="padding:0px; min-width: 200px;">
+
+            <h3 style="color:rgb(91, 76, 135)">May 2019</h3>
+
+            <nav class="nav flex-column" style="padding-right: 20px">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link text-center active" data-toggle="pill" href="#Sun" onmouseover="click();" style="line-height:50px; padding:0">Sun 12</a></li>
+                <div class="connection-line"></div>
+                <li class="nav-item"><a class="nav-link text-center" data-toggle="pill" href="#Mon" onmouseover="click();" style="line-height:50px; padding:0">Mon 13</a></li>
+                <div class="connection-line"></div>
+                <li class="nav-item"><a class="nav-link text-center" data-toggle="pill" href="#Tue" onmouseover="click();" style="line-height:50px; padding:0">Tue 14</a></li>
+                <div class="connection-line"></div>
+                <li class="nav-item"><a class="nav-link text-center" data-toggle="pill" href="#Wed" onmouseover="click();" style="line-height:50px; padding:0">Wed 15</a></li>
+                <div class="connection-line"></div>
+                <li class="nav-item"><a class="nav-link text-center" data-toggle="pill" href="#Thu" onmouseover="click();" style="line-height:50px; padding:0">Thu 16</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-sm-1"> </div>
+
+          <div class="col-sm-6 text-center">
+            <div class="tab-content">
+              <div class="tab-pane active" id="Sun">
+                <h3 style="color:rgb(91, 76, 135)">Sunday May 12th</h3>
+                <a href="#Jewellery" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px; padding:0px;">
+                      <p><b>10:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px; padding:0px">
+                      <p>Jewellery Workshop</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Jewellery" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/Jewellery.jpeg" alt="Card image" style="width: 100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      Description and details will follow.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+                <div class="connection-line"></div>
+
+                <a href="#Small" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>11:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Small Composers</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Small" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/small.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      In ‘Small Composers’ children in age group 1st-5th grade are invited to delve into the world of classical music and its composers. Students participate in playful musical expression and becomes a part of simple rhythmic and melodic figures. They use body, voice and available sound sources in the creative musical work and produce sound illustrations and sound scenery of their own stories. They listen attentively to short pieces of music. They get the opportunity to experience and evaluate artistic quality.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="Mon">
+                <h3 style="color:rgb(91, 76, 135)">Monday May 13th</h3>
+                <a href="#Work1"  data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>10:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Workshops and talks (open for submissions)</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Work1" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/call.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      We encourage anyone to submit talks or workshops that celebrates digital creativity within the areas of art, science, technology, and sound.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="connection-line"></div>
+
+                <a href="#Theramin" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>17:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Theramin concert w/Dorit Chrysler</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Theramin" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/Chrysler.JPG" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      Dorit Chrysler has been dubbed a superior wizard of the theremin. An Austrian-born, New York based composer and sound artist, Chrysler is the co-founder of the New York Theremin Society and founder of the first school of theremin, KidCoolThereminSchool. As much as the theremin is a tool in Chrysler’s electronic instrument arsenal, she's also one the most visible thereminists spreading the gospel of this mysterious sounding instrument, which is basically played by massaging thin air.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="Tue">
+                <h3 style="color:rgb(91, 76, 135)">Tuesday May 14th</h3>
+                <a href="#School" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>10:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Kid Cool Theremin School w/Dorit Chrysler</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="School" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/theremin.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      Kid Cool Theremin School is dedicated to inspire and nurture creative learning and expression through innovative music education, art and science. As part of the music and education department of Pioneer Works Center for Arts and Innovation, NY and the NY Theremin Society, the Kid Cool Theremin School nurtures an environment devoted to creative discourse and collaboration for children and parents alike, and is working towards participation rather than being passive spectators through a deep integration of the arts. Without pre consisting playing techniques and the primal and unusual way of how a theremin is being played, it enhances autonomous and creative thinking and opens up a new universe of expression for parents and children alike.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+                <div class="connection-line"></div>
+
+                <a href="#Black" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>20:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Black Queen concert</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Black" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/Queen.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      The Black Queen is a theatrical experience employing the tools of technology, classical music, folk melodies, contemporary poetry, and historical exploration to tell the story of Barbora of Celje, Queen of the Holy Roman Empire in the early 1400’s. She was a shrewd businesswoman and a compassionate guardian of justice. In partnership with a trusting and loving husband, King Sigismund of Luxembourg, she became the most powerful queen of her time. As Sigismund was dying, a rumor campaign was created to destroy her reputation and rob her of her powers. Even the pope helped in spreading stories of her as a heretic, a whore, and a witch. When her husband died, she was arrested and exiled. After her death she lived on only as an evil myth, The Black Queen. This project is designed to resurrect her as the badass she truly was.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Frederiksholm Kirke
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="Wed">
+                <h3 style="color:rgb(91, 76, 135)">Wednesday May 15th</h3>
+                <a href="#Work2" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>10:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Workshops and talks (open for submissions)</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Work2" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/call.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      We encourage anyone to submit talks or workshops that celebrates digital creativity within the areas of art, science, technology, and sound.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+                <div class="connection-line"></div>
+
+                <a href="#Black2" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>20:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Black Queen concert</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Black2" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/Queen.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      The Black Queen is a theatrical experience employing the tools of technology, classical music, folk melodies, contemporary poetry, and historical exploration to tell the story of Barbora of Celje, Queen of the Holy Roman Empire in the early 1400’s. She was a shrewd businesswoman and a compassionate guardian of justice. In partnership with a trusting and loving husband, King Sigismund of Luxembourg, she became the most powerful queen of her time. As Sigismund was dying, a rumor campaign was created to destroy her reputation and rob her of her powers. Even the pope helped in spreading stories of her as a heretic, a whore, and a witch. When her husband died, she was arrested and exiled. After her death she lived on only as an evil myth, The Black Queen. This project is designed to resurrect her as the badass she truly was.
+                    </p>
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Frederiksholm Kirke
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="Thu">
+                <h3 style="color:rgb(91, 76, 135)">Thursday May 16th</h3>
+                <a href="#Work3" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>10:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Workshops and talks (open for submissions)</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Work3" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/call.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      We encourage anyone to submit talks or workshops that celebrates digital creativity within the areas of art, science, technology, and sound.
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="connection-line"></div>
+
+                <a href="#Salt" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>17:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Salt Itinerary</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Salt" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/salt.png" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      Salt Itinerary performance transcends theatrical and music conventions in a combination of text and music, where the voice is at the core of the staging dramaturgy, multiplying itself through audio and video. This stage work by Miguel Azguime developed the combination of text and music, extending Azguime's concept of “speech as music” and “music as speech”, growing in several directions (notably by means of technology - both audio and video) and embodying different realms (spoken, sung, hypervoice). It revolves around languages, words as meaning and words as sound.
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+
+                <div class="connection-line"></div>
+
+                <a href="#Tribute" data-toggle="collapse" onmouseover="click();">
+                  <div class="row">
+                    <div class="col-sm-4 time_btn" style="background: rgb(203, 230, 81); border-radius: 5px 0px 0px 0px;">
+                      <p><b>20:00</b></p>
+                    </div>
+                    <div class="col-sm-8 time_btn" style="border-radius: 0px 5px 0px 0px;">
+                      <p>Queen Tribute Concert</p>
+                    </div>
+                  </div>
+                </a>
+                <div id="Tribute" class="collapse" style="margin-left:-15px;margin-right:-15px">
+                  <img class="event-img-top" src="images/freddie.jpg" alt="Card image" style="width:100%">
+                  <div style="background:white">
+                    <p style="margin-left:20px;margin-right:20px;margin-bottom:0px">
+                      Let’s cover some Queen! On the final day of the festival, we want anyone musically inclined to channel their inner Freddie Mercury.
+                      <br /><br />
+                      We hope to see music created with physical modeling, self made instruments, real world sampling, audience participation, interesting visuals, etc.
+                      <br /><br />
+                      We only ask that:
+                      <ul class="text-left">
+                        <li>You play songs from the Queen repertoire</li>
+                        <li>You incorporate the spirit of art, science, technology, and digital creativity</li>
+                      </ul>
+                      <br /><br />
+                      If you have the music, but lack the singing (or vice versa), let us know and we’ll try to help with the pairing. Or maybe you just want to contribute with cool visuals? Let us know.
+                  </div>
+                  <div class="event-footer">
+                    <p style="margin:0px">
+                      <b>Location:</b> <br> Aalborg University Copenhagen campus
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1"> </div>
+        </div>
+      </div>
+      <div  style="height: 50px; position: relative">  </div>
+    </div>
+
+    <div id="info" class="container-fluid" style="min-height: 100px";>
+      <div  style="height: 100px; position: relative">
+        <h1 class="pagetitle">Info</h1>
+      </div>
+
+      <div class="card-columns mx-auto" style="max-width:1000px">
+        <div class="card text-center" >
+          <img class="card-img-top" src="images/contact.jpg" alt="Card image" style="width:100%; max-height: 200px">
+          <div class="card-header">
+            <h3 class="card-title">Contact</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <b>Email:</b> <br> <a href="mailto:queensfestival@create.aau.dk" target="_top">queensfestival@create.aau.dk</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="venues" class="container-fluid" style="min-height: 100px; background: rgb(246, 246, 246)";>
+      <div  style="height: 100px; position: relative">
+        <h1 class="pagetitle">Venues</h1>
+      </div>
+
+      <div class="card-columns mx-auto" style="max-width:1000px">
+        <div class="card text-center" >
+          <img class="card-img-top" src="images/aau.jpeg" alt="Card image" style="width:100%; max-height: 200px">
+          <div class="card-header">
+            <h3 class="card-title">Aalborg University Copenhagen</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <b>Address:</b> <br> A. C. Meyers Vænge 15 <br> 2450 København
+            </p>
+          </div>
+        </div>
+        <div class="card text-center" >
+          <img class="card-img-top" src="images/kirke.jpg" alt="Card image" style="width:100%; max-height: 200px">
+          <div class="card-header">
+            <h3 class="card-title">Frederiksholm Kirke</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <b>Address:</b> <br> Louis Pios Gade 8 <br> 2450 København
+            </p>
+          </div>
+        </div>
+        <div class="card text-center" >
+          <img class="card-img-top" src="images/Luther.jpeg" alt="Card image" style="width:100%; max-height: 200px">
+          <div class="card-header">
+            <h3 class="card-title">Luther Kirke</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <b>Address:</b> <br> Randersgade 5 <br> 2100 København
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="googleMap" style="height:400px;width:100%; border-radius: 5px 5px 5px 5px;"></div>
+      <script>
+      function myMap() {
+      var kirke = new google.maps.LatLng(55.650773, 12.534305);
+      var AAU = new google.maps.LatLng(55.650346, 12.543035);
+      var Luther = new google.maps.LatLng(55.702444, 12.581406);
+      var Center = new google.maps.LatLng(55.678772, 12.556405);
+      var mapProp = {center:Center, zoom:12, scrollwheel:false, draggable:true, mapTypeId:google.maps.MapTypeId.ROADMAP};
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      var marker = new google.maps.Marker({position:AAU});
+      var marker2 = new google.maps.Marker({position:kirke});
+      var marker3 = new google.maps.Marker({position:Luther});
+      marker.setMap(map);
+      marker2.setMap(map);
+      marker3.setMap(map);
+      }
+
+      (function() {
+        var dropdownMenu;
+        $(window).on('show.bs.dropdown', function(e) {
+          dropdownMenu = $(e.target).find('.dropdown-menu');
+          $('body').append(dropdownMenu.detach());
+          dropdownMenu.css('display', 'block');
+          dropdownMenu.position({
+            'my': 'right top',
+            'at': 'right bottom',
+            'of': $(e.relatedTarget)
+          })
+        });
+        $(window).on('hide.bs.dropdown', function(e) {
+          $(e.target).append(dropdownMenu.detach());
+          dropdownMenu.hide();
+        });
+      })();
+
+      $("#CFS .CFS-indicater a").hover(function(){
+        var goto = Number( $(this).attr('data-slide-to') );
+        $("#CFS").carousel(goto);
+      });
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYYeCaLmBl6-LxjwJkp-3x9xBkLpzRV4w&callback=myMap"></script>
+    </div>
+
+  <div class="panel-footer panel-custom">All content is licensed under a <b><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" style="color: white; text-decoration: underline;";>Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a></b> unless otherwise specified.</div>
+</body>
+</html>
