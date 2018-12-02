@@ -4,7 +4,7 @@
 
 .bg-img {
 	position: fixed;
-        background-image: url("http://www.design2013.aau.dk/digitalAssets/88/88790_spilled--se.jpg");
+        background: grey;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -12,4 +12,10 @@
 	min-width: 100%;
 	min-height: 100%;
 	z-index: -1;
+}
+
+body.ie8 .bg-img, body.ie7 .bg-img, body.ie6 .bg-img{
+	/* < ie9  */
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(url("http://www.design2013.aau.dk/digitalAssets/88/88790_spilled--se.jpg"), sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(url("http://www.design2013.aau.dk/digitalAssets/88/88790_spilled--se.jpg"), sizingMethod='scale')";
 }
