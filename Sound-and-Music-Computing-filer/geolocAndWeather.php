@@ -1,0 +1,1 @@
+DCInfosCallback({"country":"DK","region":"17","city":"Copenhagen","latitude":55.6667,"longitude":12.5833,"postal_code":"1513","browser":"Google Chrome","ip":"89.23.224.66","traffic":null})

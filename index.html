@@ -1,152 +1,564 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-  <style>
-
-  .cf, .box, .megadropdown, .wrapper::after {
-    *zoom: 1;
-  }
-
-  .bg-img {
-    position: fixed;
-    <!-- background: url("https://www.design2013.aau.dk/digitalAssets/88/88790_spilled--se.jpg");
-    background: black;
-    background-size: cover;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-
-  .wrapper {
-
-    margin: 0 auto;
-    max-width: 972px;
-    position: relative;
-    padding: 0 20px;
-  }
-
-  #servicemenu {
-    min-height: 82px;
-    z-index: 100;
-  }
-
-  .white {
-    background-color: white;
-  }
-
-  .servicemenuInner {
-    color: #a2acb6;
-    position: relative;
-    height: 40px;
-    padding: 15px 0;
-    text-align: center;
-    display: flex;
-  }
-
-  .box {
-    margin: 0 0 6px 6px;
-    padding: 20px;
-    display: block;
-  }
-
-  .shortCutsWrapper {
-    display: block;
-  }
-
-  .mobileMenu.topLink, .shortCutsWrapper {
-    float: left;
-    margin-left: 15px;
-  }
-  
-  .navbar__toggler {
-    position: absolute;
-    top: 50%;
-    left: 13px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-color: transparent !important;
-    color: #211a52;
-    outline: 0;
-    background-color: transparent;
-    -webkit-appearance: none;
-  }
+<html class="mti-inactive js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" prefix="og: http://ogp.me/ns#"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-  </style>
+<meta name="description" content="Master in Sound and Music Computing (SMC) at AAU addresses challenges in the current generation of audio and music technologies.">
+<title>Sound and Music Computing</title>
 
-</head>
-<body>
+<!-- Remove no-js enable html5 elements -->
+<script id="facebook-jssdk" src="Sound-and-Music-Computing-filer/sdk.js"></script><script async="" src="Sound-and-Music-Computing-filer/gtm.js"></script><script type="text/javascript">
+    //Clear no-js
+    document.getElementsByTagName('html')[0].className = document
+            .getElementsByTagName('html')[0].className.replace('no-js', '');
+    //Enable html5 elements in IE
+    'article aside footer header nav section time'.replace(/\w+/g, function(n) {
+        document.createElement(n)
+    });
+</script>
 
-  <div class="bg-img"></div>
+<!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NFKBNV');</script> <!-- End Google Tag Manager --><meta name="twitter:card" content="summary">
 
-  <header>
-    <div id="servicemenu" class="wrapper cf">
-      ::before
-      <div class="servicemenuInner box white">
-      <input type="hidden" value="true" id="useOverlay">
-      <nav>
-       <div class="shortCutsWrapper">
-        <button class="navbar__toggler hamburger--spin collapsed" id="shortcuthamburger" type="button" data-toggle="collapse" data-target="#shortcutsMeny" data-parent="" aria-expanded="false">
-         <div class="hamburger__inner">
-          <span class="hamburger__icon"></span>
-         </div> </button>
-        <ul class="shortCutDropdown unstyled" id="shortcutsMeny">
-         <li> <a href="https://www.en.aau.dk/news" title="News" class="topLink white">News</a></li>
-         <li> <a href="https://www.en.aau.dk/events" title="Events" class="topLink white">Events</a></li>
-         <li> <a href="https://www.en.aau.dk/contact" title="Contact" class="topLink white">Contact</a></li>
-         <li> <a href="https://www.en.aau.dk/about-aau/organisation-management/campus-areas" title="Campus Areas" class="topLink white">Campus Areas</a></li>
-         <li> <a href="https://www.en.aau.dk/press-contact" title="For the press" class="topLink white">For the press</a></li>
-         <li> <a href="https://www.alumni.aau.dk/english/" title="For Alumni" class="topLink white">For Alumni</a></li>
-        </ul>
-       </div>
-       <!-- Mobile hamburger -->
-       <button class="navbar__toggler hamburger--spin navbar__toggler--mobile" type="button" data-toggle="collapse" data-target="#mobileMenu" data-parent="" aria-expanded="true">
-        <div class="hamburger__inner">
-         <span class="hamburger__icon"></span>
-        </div> </button>
-       <ul class="horizontal unstyled flexnavigation expandedMobileMenu" id="mobileMenu">
-        <!-- Mobile menu shortcuts -->
-        <li class="serviceMenuCenterItem shortCutDropdownMenu"> <a href="#" class="topLink shortcutExpandLink">Shortcuts</a>
-         <ul class="shortCutDropdown unstyled shortcutsmobile">
-          <li> <a href="https://www.en.aau.dk/news" title="News" class="topLink white">News</a></li>
-          <li> <a href="https://www.en.aau.dk/events" title="Events" class="topLink white">Events</a></li>
-          <li> <a href="https://www.en.aau.dk/contact" title="Contact" class="topLink white">Contact</a></li>
-          <li> <a href="https://www.en.aau.dk/about-aau/organisation-management/campus-areas" title="Campus Areas" class="topLink white">Campus Areas</a></li>
-          <li> <a href="https://www.en.aau.dk/press-contact" title="For the press" class="topLink white">For the press</a></li>
-          <li> <a href="https://www.alumni.aau.dk/english/" title="For Alumni" class="topLink white">For Alumni</a></li>
-         </ul> </li>
-        <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/education/" class="topLink">aau education</a></li>
-        <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/research/" class="topLink">aau research</a></li>
-        <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/cooperation/" class="topLink">aau cooperation</a></li>
-        <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/about-aau" class="topLink">About AAU</a></li>
-        <li class="serviceMenuCenterItem"> <a href="https://www.vacancies.aau.dk/" class="topLink">Vacant Positions</a></li>
-        <li class="serviceMenuCenterItem"> <a href="https://www.en.intern.aau.dk/" class="topLink">Staff and students</a></li>
-        <li class="serviceMenuCenterItem hiddenMobile"> <a href="https://www.en.search.aau.dk/?locale=en" class="topLink searchMenu"><span class="topLinkIcon search"></span></a> </li>
-        <li class="serviceMenuCenterItem hiddenMobile"> <a href="https://www.aau.dk/" class="topLink"> <span class="topLinkIcon danish"></span> </a> </li>
-       </ul>
-       <a href="https://www.en.search.aau.dk/?locale=en" class="topLinkMobile topLink searchMenu"><span class="topLinkIcon search"></span></a>
-       <a href="https://www.aau.dk/" class="topLinkMobile topLink topLinkMobileLanguage"> <span class="topLinkIcon danish"></span> </a>
-       <a href="https://www.en.search.aau.dk/?locale=en" class="topLinkMobile topLink searchMenu"><span class="topLinkIcon search"></span></a>
-      </nav>
-      </div>
-      <!-- End service menu -->
-      <input type="hidden" value="da" id="languageCodeInput">
-      <div id="search-div">
-      <div id="close-search-div"></div>
-      <iframe src="https://aau-search-web.azurewebsites.net/?mobile=false&amp;site=www.smc.aau.dk" id="search-iframe" height="_FB_f124cfcc1458944type=resize&amp;width=500&amp;height=395&amp;cb=f268770284fa5&amp;domain=www.smc.aau.dk&amp;origin=https%3A%2F%2Fwww.smc.aau.dk%2Ff124cfcc1458944&amp;relation=parent.parent"></iframe>
-      </div>
-    <script type="text/javascript">		var width = window.outerWidth;		var mobile = true;		if(width > 768) {			mobile = false;		}		var iframe = document.getElementById("search-iframe");		iframe.src = iframe.src + "?mobile=" + mobile + "&site="+window.location.hostname;	</script>
+<script type="text/javascript" src="Sound-and-Music-Computing-filer/6ffba2ea-d55c-4389-b794-a04d376df85c.js"></script>
+
+<link rel="stylesheet" type="text/css" href="Sound-and-Music-Computing-filer/style.css">
+
+<link rel="stylesheet" type="text/css" href="Sound-and-Music-Computing-filer/colorCss.css">
+<link rel="stylesheet" type="text/css" href="Sound-and-Music-Computing-filer/backgroundCss.css">
+<link rel="shortcut icon" type="image/vnd.microsoft.ico" href="https://www.resources.aau.dk/design2013/images/aaufavicon.ico?v=2">
+<link rel="alternate" type="application/rss+xml" href="https://www.smc.aau.dk/?rss=22"><style type="text/css" id="mti_fontface_6ffba2ea-d55c-4389-b794-a04d376df85c">@font-face{
+font-family:"DIN Next W01 Black";
+src:url("https://fast.fonts.net/dv2/3/9541b817-6a02-4e7a-af21-ce24b70d9ba3.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-BlackItalic";
+src:url("https://fast.fonts.net/dv2/3/4cd37f64-b230-4162-88bf-f6cccde94e4b.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W01 Bold";
+src:url("https://fast.fonts.net/dv2/3/9949035f-6226-4080-a14a-bf7d94ffb1e1.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-BoldItalic";
+src:url("https://fast.fonts.net/dv2/3/140a0a6f-f218-4071-8eb8-f2bc45ed5121.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedBla";
+src:url("https://fast.fonts.net/dv2/3/5a992686-aab3-4b26-9c57-f41b0f01b6fd.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedBol";
+src:url("https://fast.fonts.net/dv2/3/0c0418fe-d324-4ab2-978a-e8201c646ca1.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedHea";
+src:url("https://fast.fonts.net/dv2/3/d245e531-16e5-4428-904d-d6cb987d44f9.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedLig";
+src:url("https://fast.fonts.net/dv2/3/43e82893-3880-47b2-82d6-5b136f8f7477.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedMed";
+src:url("https://fast.fonts.net/dv2/3/2613a064-2962-44af-ae6f-3640e06e8dc4.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedReg";
+src:url("https://fast.fonts.net/dv2/3/3b15daf5-d7fb-4099-93b9-db20fd26c2fe.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-CondensedUlt";
+src:url("https://fast.fonts.net/dv2/3/02c54ffd-ffe5-4a1d-baf3-6f2f329e985e.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W01 Heavy";
+src:url("https://fast.fonts.net/dv2/3/d5c47039-3cdf-4eb9-ad4a-220e7441ec5d.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-HeavyItalic";
+src:url("https://fast.fonts.net/dv2/3/0e69005b-f8b8-4d6d-999f-865965bdfd21.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W01 Italic";
+src:url("https://fast.fonts.net/dv2/3/c5635d60-91fa-4e4b-8a51-41c97fc744c3.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W01 Light";
+src:url("https://fast.fonts.net/dv2/3/bc176270-17fa-4c78-a343-9fe52824e501.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-LightItalic";
+src:url("https://fast.fonts.net/dv2/3/e1c997f3-fb27-4289-abc6-5ef059e51723.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W01 Medium";
+src:url("https://fast.fonts.net/dv2/3/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextW01-MediumItalic";
+src:url("https://fast.fonts.net/dv2/3/00ebffbe-b1fe-4913-b8d8-50f0ba8af480.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W01 Regular";
+src:url("https://fast.fonts.net/dv2/3/c5a7f89e-15b6-49a9-8259-5ea665e72191.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"HelveticaWorldW01-Bold";
+src:url("https://fast.fonts.net/dv2/3/8aa768c0-545d-4502-b4a8-d3ab9e188bde.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"HelveticaWorldW01-Itali";
+src:url("https://fast.fonts.net/dv2/3/188de9c9-6566-416c-8575-07c461cf8f79.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"Helvetica World W01";
+src:url("https://fast.fonts.net/dv2/3/4686edb2-41cf-4e4b-87ee-b09427921b44.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DIN Next W02 Medium";
+src:url("https://fast.fonts.net/dv2/3/97b0cc11-9afb-4a2f-93b7-e1b5c40d80a6.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextRoundedLTW01-Bol";
+src:url("https://fast.fonts.net/dv2/3/52382db1-3de6-473e-b9c0-3cb5e70e80a2.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextRoundedLTW01-Lig";
+src:url("https://fast.fonts.net/dv2/3/a97ce140-d04b-430b-a41b-56ea0794c997.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextRoundedLTW01-Med";
+src:url("https://fast.fonts.net/dv2/3/97252acf-16d3-480c-8269-89ea815e4179.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextRoundedLTW01-Reg";
+src:url("https://fast.fonts.net/dv2/3/b03c5cd2-c6ad-4764-9cab-bf6211f181a7.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextLTW01-UltraLight 706122";
+src:url("https://fast.fonts.net/dv2/3/04c0d1f1-0fdf-4866-a034-1b5d1ba44a94.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"DINNextLTW01-UltraLight 706125";
+src:url("https://fast.fonts.net/dv2/3/11143434-96a9-4740-a138-f16d49263f2f.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+@font-face{
+font-family:"HelveticaWorldW01-BdIt";
+src:url("https://fast.fonts.net/dv2/3/9b555c3d-7de8-4d48-aac8-928b3d465c77.woff?d44f19a684109620e4841570ae90e8188eaf194bc821bfce38718f2531915d7d0d9da9c81844ec4e4ae27e38239ae72daf154bbbd0564278f35a13baf37b039c385e6e9daa2f6b53e7aa31bd379bf3b3c91746e3447dc7c4d198b0f1a35ecafa4caeaf5e79442fd2e68a44bb810d53a5bc0596fb3f82e3852a63b3a73123081aa9756f062e6a28c01c72472945985b1f4057774a43e479d814f92dcfc04958010ecc9d35948b67966f513efb0e40cc5ec968e07fe3f815db2a6c16578f8d4eb2648c5f1224b130&projectId=6ffba2ea-d55c-4389-b794-a04d376df85c") format('woff');}
+</style>
+<link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet" href="Sound-and-Music-Computing-filer/1.css"><style type="text/css">.fancybox-margin{margin-right:15px;}</style></head>
+
+<!--[if lt IE 7]> <body class="ie6"> <![endif]--><!--[if IE 7]><body class="ie7"><![endif]--><!--[if IE 8]><body class="ie8"> <![endif]--><!--[if gt IE 8]><!--><body>
+	<!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NFKBNV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager --><!--<![endif]--><div class="bg-img"></div>
+
+    <!-- StickyFooter --><div class="stickyFooter">
+        <!-- Service menu --><div id="servicemenu" class="wrapper cf">
+ <div class="servicemenuInner box white">
+  <input type="hidden" value="true" id="useOverlay">
+  <nav>
+   <div class="shortCutsWrapper">
+    <button class="navbar__toggler hamburger--spin collapsed" id="shortcuthamburger" type="button" data-toggle="collapse" data-target="#shortcutsMeny" data-parent="" aria-expanded="false">
+     <div class="hamburger__inner">
+      <span class="hamburger__icon"></span>
+     </div> </button>
+    <ul class="shortCutDropdown unstyled" id="shortcutsMeny">
+     <li> <a href="https://www.en.aau.dk/news" title="News" class="topLink white">News</a></li>
+     <li> <a href="https://www.en.aau.dk/events" title="Events" class="topLink white">Events</a></li>
+     <li> <a href="https://www.en.aau.dk/contact" title="Contact" class="topLink white">Contact</a></li>
+     <li> <a href="https://www.en.aau.dk/about-aau/organisation-management/campus-areas" title="Campus Areas" class="topLink white">Campus Areas</a></li>
+     <li> <a href="https://www.en.aau.dk/press-contact" title="For the press" class="topLink white">For the press</a></li>
+     <li> <a href="https://www.alumni.aau.dk/english/" title="For Alumni" class="topLink white">For Alumni</a></li>
+    </ul>
+   </div>
+   <!-- Mobile hamburger -->
+   <button class="navbar__toggler hamburger--spin collapsed navbar__toggler--mobile" type="button" data-toggle="collapse" data-target="#mobileMenu" data-parent="" aria-expanded="false">
+    <div class="hamburger__inner">
+     <span class="hamburger__icon"></span>
+    </div> </button>
+   <ul class="horizontal unstyled flexnavigation" id="mobileMenu">
+    <!-- Mobile menu shortcuts -->
+    <li class="serviceMenuCenterItem shortCutDropdownMenu"> <a href="#" class="topLink shortcutExpandLink">Shortcuts</a>
+     <ul class="shortCutDropdown unstyled shortcutsmobile">
+      <li> <a href="https://www.en.aau.dk/news" title="News" class="topLink white">News</a></li>
+      <li> <a href="https://www.en.aau.dk/events" title="Events" class="topLink white">Events</a></li>
+      <li> <a href="https://www.en.aau.dk/contact" title="Contact" class="topLink white">Contact</a></li>
+      <li> <a href="https://www.en.aau.dk/about-aau/organisation-management/campus-areas" title="Campus Areas" class="topLink white">Campus Areas</a></li>
+      <li> <a href="https://www.en.aau.dk/press-contact" title="For the press" class="topLink white">For the press</a></li>
+      <li> <a href="https://www.alumni.aau.dk/english/" title="For Alumni" class="topLink white">For Alumni</a></li>
+     </ul> </li>
+    <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/education/" class="topLink">aau education</a></li>
+    <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/research/" class="topLink">aau research</a></li>
+    <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/cooperation/" class="topLink">aau cooperation</a></li>
+    <li class="serviceMenuCenterItem"> <a href="https://www.en.aau.dk/about-aau" class="topLink">About AAU</a></li>
+    <li class="serviceMenuCenterItem"> <a href="https://www.vacancies.aau.dk/" class="topLink">Vacant Positions</a></li>
+    <li class="serviceMenuCenterItem"> <a href="https://www.en.intern.aau.dk/" class="topLink">Staff and students</a></li>
+    <li class="serviceMenuCenterItem hiddenMobile"> <a href="https://www.en.search.aau.dk/?locale=en" class="topLink searchMenu"><span class="topLinkIcon search"></span></a> </li>
+    <li class="serviceMenuCenterItem hiddenMobile"> <a href="https://www.aau.dk/" class="topLink"> <span class="topLinkIcon danish"></span> </a> </li>
+   </ul>
+   <a href="https://www.en.search.aau.dk/?locale=en" class="topLinkMobile topLink searchMenu"><span class="topLinkIcon search"></span></a>
+   <a href="https://www.aau.dk/" class="topLinkMobile topLink topLinkMobileLanguage"> <span class="topLinkIcon danish"></span> </a>
+   <a href="https://www.en.search.aau.dk/?locale=en" class="topLinkMobile topLink searchMenu"><span class="topLinkIcon search"></span></a>
+  </nav>
+ </div>
+ <!-- End service menu -->
+ <input type="hidden" value="da" id="languageCodeInput">
+ <div id="search-div">
+  <div id="close-search-div"></div>
+  <iframe src="Sound-and-Music-Computing-filer/a.html" id="search-iframe" height="0"></iframe>
+ </div>
+ <script type="text/javascript">		var width = window.outerWidth;		var mobile = true;		if(width > 768) {			mobile = false;		}		var iframe = document.getElementById("search-iframe");		iframe.src = iframe.src + "?mobile=" + mobile + "&site="+window.location.hostname;	</script>
+</div><!-- End service menu --><!--  Marquee --><div class="wrapper"></div>
+        <!--  end Marquee --><div id="top">
+            <div class="wrapper">
+                <div class="section">
+                    <div class="spotCon grid g12 isCentered"><a href="https://www.en.aau.dk/"><img src="Sound-and-Music-Computing-filer/logo_en.png" alt="AAU logo"></a></div>
+                    <div class="spotCon grid g12"><h2 class="highlighted">Sound and music computing</h2></div>
+                    <!--  Headline --><div class="spotCon grid g12"></div>
+                            <!--  end Headline --><div class="clear cleargrid"></div>
+                </div>
+
+                <!--  Localmenu --><div class="stickySpy">
+		<div class="sticky-wrapper"><div class="localmenu" style="width: 948px;">
+            <div class="localmenuBase">
+				<div class="box color navigationTitle">
+					<ul class="breadcrumb unstyled ">
+				<li><a href="https://www.smc.aau.dk/" title="Sound and Music Computing" class="current">Sound and Music Computing</a>
+</li><li>/</li></ul><ul class="menu unstyled"><li><a href="https://www.smc.aau.dk/about/" title="About" class="localMenuItem">About</a>
+</li><li><a href="https://www.smc.aau.dk/Student+testimonials/" title="Student testimonials" class="localMenuItem">Student testimonials</a>
+</li><li><a href="https://www.smc.aau.dk/the-programme/" title="The SMC programme" class="localMenuItem">The SMC programme</a>
+</li><li><a href="https://www.smc.aau.dk/application-and-deadlines/" title="Application and Deadlines" class="localMenuItem">Application and Deadlines</a>
+</li><li><a href="https://www.smc.aau.dk/people/" title="People" class="localMenuItem">People</a>
+</li><li><a href="https://www.smc.aau.dk/contact/" title="Contact" class="localMenuItem">Contact</a>
+</li><li><a href="https://www.smc.aau.dk/research/" title="Research" class="localMenuItem">Research</a>
+</li><li><a href="https://www.smc.aau.dk/facilities/" title="Facilities" class="localMenuItem">Facilities</a>
+</li><li><a href="https://www.smc.aau.dk/copenhagen/" title="AAU Copenhagen" class="localMenuItem">AAU Copenhagen</a>
+</li><li><a href="https://www.smc.aau.dk/aalborg/" title="AAU Aalborg" class="localMenuItem">AAU Aalborg</a>
+</li><li><a href="https://www.smc.aau.dk/newslist/" title="News" class="localMenuItem">News</a>
+</li></ul>
+					</div>
+			</div>
+
+            <div class="localmenuMobile">
+				<div class="color navigationTitle">
+				<a href="#" class="box"><h2 class="localmenuMobileHeading">Menu</h2></a>
+
+					<ul class="breadcrumb unstyled ">
+				<li><a href="https://www.smc.aau.dk/" title="Sound and Music Computing" class="current">Sound and Music Computing</a>
+</li><li>/</li></ul><ul class="menu unstyled"><li><a href="https://www.smc.aau.dk/about/" title="About" class="localMenuItem hasArrow">About</a>
+</li><li><a href="https://www.smc.aau.dk/Student+testimonials/" title="Student testimonials" class="localMenuItem hasArrow">Student testimonials</a>
+</li><li><a href="https://www.smc.aau.dk/the-programme/" title="The SMC programme" class="localMenuItem hasArrow">The SMC programme</a>
+</li><li><a href="https://www.smc.aau.dk/application-and-deadlines/" title="Application and Deadlines" class="localMenuItem hasArrow">Application and Deadlines</a>
+</li><li><a href="https://www.smc.aau.dk/people/" title="People" class="localMenuItem hasArrow">People</a>
+</li><li><a href="https://www.smc.aau.dk/contact/" title="Contact" class="localMenuItem hasArrow">Contact</a>
+</li><li><a href="https://www.smc.aau.dk/research/" title="Research" class="localMenuItem hasArrow">Research</a>
+</li><li><a href="https://www.smc.aau.dk/facilities/" title="Facilities" class="localMenuItem hasArrow">Facilities</a>
+</li><li><a href="https://www.smc.aau.dk/copenhagen/" title="AAU Copenhagen" class="localMenuItem hasArrow">AAU Copenhagen</a>
+</li><li><a href="https://www.smc.aau.dk/aalborg/" title="AAU Aalborg" class="localMenuItem hasArrow">AAU Aalborg</a>
+</li><li><a href="https://www.smc.aau.dk/newslist/" title="News" class="localMenuItem hasArrow">News</a>
+</li></ul>
+		</div>
+			</div>
+		</div></div>
+	</div><!--  end Localmenu --></div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <!-- Main --><div id="main">
+            <!-- Wrapper in Main--><div class="wrapper"><div class="section">
+  <div class="spotCon grid g12">
+        <h1 class="highlighted ">Sound and Music Computing</h1>
+    </div>
+     <div class="clear cleargrid"></div>
+</div><div class="section ">
+    <div class="spotCon grid g8">
+
+        <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				The new MSc in Sound and Music Computing</h2>
+		<meta itemprop="dateModified" content="2017-07-03T03:32+0200">
+			<meta itemprop="datePublished" content="2014-09-01T04:03+0200">
+		<div itemprop="articleBody">
+				<p><img alt="" src="Sound-and-Music-Computing-filer/88960_smc-banner-650x240.jpg" align="left"></p>
+</div>
+		</div>
+</div>
+
     </div>
 
-  </header>
-</body>
-</html>
+    <div class="spotCon grid g4">
+         <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box color">
+	<h2 itemprop="headline">
+				Contact</h2>
+		<meta itemprop="dateModified" content="2014-09-22T07:56+0200">
+			<meta itemprop="datePublished" content="2014-08-26T01:00+0200">
+		<div itemprop="articleBody">
+				<p><a href="https://www.smc.aau.dk/contact/" class="smallButton">Go to contact page</a></p></div>
+		</div>
+</div><div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box color">
+	<meta itemprop="dateModified" content="2016-06-06T01:20+0200">
+			<meta itemprop="datePublished" content="2016-06-06T12:44+0200">
+		<div itemprop="articleBody">
+				<h2><a class="smallButton" href="https://www.smc.aau.dk/Student+testimonials/">student testimonials</a></h2>
+</div>
+		</div>
+</div>
+    </div>
+     <div class="clear cleargrid"></div>
+</div><div class="section ">
+
+  <div class="spotCon grid g4">
+        <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				About</h2>
+		<img src="Sound-and-Music-Computing-filer/88931_equalizer-r--d-278x154.jpg" alt="About" title="About" itemprop="image">
+	<meta itemprop="dateModified" content="2014-09-22T07:56+0200">
+			<meta itemprop="datePublished" content="2014-08-26T01:01+0200">
+		<div itemprop="articleBody">
+				<p><br><a href="https://www.smc.aau.dk/about/" class="smallButton">a Short introduction to Smc</a></p></div>
+		</div>
+</div>
+    </div>
+
+<div class="spotCon grid g4">
+        <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				The SMC programme</h2>
+		<img src="Sound-and-Music-Computing-filer/88927_smc-programme-278x154.jpg" alt="The SMC programme" title="The SMC programme" itemprop="image">
+	<meta itemprop="dateModified" content="2014-09-22T07:56+0200">
+			<meta itemprop="datePublished" content="2014-08-26T01:05+0200">
+		<div itemprop="articleBody">
+				<p><br><a href="https://www.smc.aau.dk/the-programme/" class="smallButton">A quick overview</a></p></div>
+		</div>
+</div>
+    </div>
+
+<div class="spotCon grid g4">
+        <div class="section ">
+  <div class="spotCon grid g6">
+	<div class="circle white">
+				<a href="http://www.studyguide.aau.dk/programmes/postgraduate/97903/" title="Study guide (UK)">
+                                    Study guide (UK)</a>
+		</div><div class="circle color">
+				<a href="https://www.smc.aau.dk/application-and-deadlines/" title="Application and Deadlines">
+                                    Application and Deadlines</a>
+		</div>
+</div>
+<div class="spotCon grid g6">
+	<div class="circle white">
+				<a href="http://www.aau.dk/uddannelser/kandidat/sound-and-music-computing" title="Studieguide (DK)">
+                                    Studieguide (DK)</a>
+		</div><div class="circle white">
+				<a href="https://www.facebook.com/smccph" title="SMC Facebook">
+                                    SMC Facebook</a>
+		</div>
+</div>
+<div class="clear"></div>
+</div><div class="section ">
+  <div class="spotCon grid g6">
+
+</div>
+<div class="spotCon grid g6">
+
+</div>
+<div class="clear"></div>
+</div>
+    </div>
+     <div class="clear cleargrid"></div>
+</div><div class="section ">
+
+  <div class="spotCon grid g4">
+        <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				People</h2>
+		<img src="Sound-and-Music-Computing-filer/88932_stefania-278x154.jpg" alt="People" title="People" itemprop="image">
+	<meta itemprop="dateModified" content="2014-09-22T07:56+0200">
+			<meta itemprop="datePublished" content="2014-08-26T01:02+0200">
+		<div itemprop="articleBody">
+				<p><a href="https://www.smc.aau.dk/people/" class="smallButton">The team behind</a></p></div>
+		</div>
+</div><div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				Study in Copenhagen</h2>
+		<img src="Sound-and-Music-Computing-filer/88923_campus-cph-bro-278x154.jpg" alt="Study in Copenhagen" title="Study in Copenhagen" itemprop="image">
+	<meta itemprop="dateModified" content="2018-09-03T01:38+0200">
+			<meta itemprop="datePublished" content="2014-08-26T01:04+0200">
+		<div itemprop="articleBody">
+				<p><a class="smallButton" href="https://www.smc.aau.dk/copenhagen/">campus Copenhagen</a></p>
+</div>
+		</div>
+</div>
+    </div>
+
+<div class="spotCon grid g4">
+        <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				Research</h2>
+		<img src="Sound-and-Music-Computing-filer/88929_creative-music-mixing-278x154.jpg" alt="Research" title="Research" itemprop="image">
+	<meta itemprop="dateModified" content="2014-09-22T07:56+0200">
+			<meta itemprop="datePublished" content="2014-08-26T01:03+0200">
+		<div itemprop="articleBody">
+				<p><a href="https://www.smc.aau.dk/research/" class="smallButton">Smc research at Aau</a></p></div>
+		</div>
+</div><div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				Study in Aalborg</h2>
+		<img src="Sound-and-Music-Computing-filer/88922_campus-aalborg2-278x154.jpg" alt="Study in Aalborg" title="Study in Aalborg" itemprop="image">
+	<meta itemprop="dateModified" content="2018-09-03T01:38+0200">
+			<meta itemprop="datePublished" content="2014-09-17T03:02+0200">
+		<div itemprop="articleBody">
+				<p><a class="smallButton" href="https://www.smc.aau.dk/aalborg/">&nbsp;campus aalborg&nbsp;</a></p>
+</div>
+		</div>
+</div>
+    </div>
+
+<div class="spotCon grid g4">
+        <div class="box white">
+	<h2>News</h2>
+	<ul class="group columned">
+		<li itemscope="" itemtype="http://schema.org/Article">
+				<a href="https://www.smc.aau.dk/newslist/news/smc-students-needed-for-open-house-in-february.cid341892" itemprop="url" class="hasArrowBelow" title="">
+						<p class="muted">
+								15.12.2017</p>
+						<img itemprop="image" src="Sound-and-Music-Computing-filer/351095_269596_a-bent-hus-storlille.jpg" alt="">
+						<h3 itemprop="name">
+							SMC students needed for Open House in February</h3>
+
+						</a>
+				<meta itemprop="datePublished" content="2017-12-15T10:20+0100">
+				</li>
+			<li itemscope="" itemtype="http://schema.org/Article">
+				<a href="https://www.smc.aau.dk/newslist/news/three-smc-students-have-won-the-venture-cup-prize.cid309436" itemprop="url" class="hasArrowBelow" title="">
+						<p class="muted">
+								09.03.2017</p>
+						<h3 itemprop="name">
+							Three SMC-students have won the Venture Cup prize</h3>
+
+						</a>
+				<meta itemprop="datePublished" content="2017-03-09T12:55+0100">
+				</li>
+			</ul>
+</div><div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<h2 itemprop="headline">
+				Facilities</h2>
+		<img src="Sound-and-Music-Computing-filer/88976_facilities-278x154.jpg" alt="Facilities" title="Facilities" itemprop="image">
+	<meta itemprop="dateModified" content="2014-09-22T07:56+0200">
+			<meta itemprop="datePublished" content="2014-09-17T03:08+0200">
+		<div itemprop="articleBody">
+				<p><a href="https://www.smc.aau.dk/facilities/" class="smallButton">See our facilities</a></p></div>
+		</div>
+</div>
+    </div>
+     <div class="clear cleargrid"></div>
+</div><div class="section ">
+    <div class="spotCon grid g8">
+
+        <div class="article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="box white">
+	<meta itemprop="dateModified" content="2015-11-25T12:22+0100">
+			<meta itemprop="datePublished" content="2014-11-04T08:57+0100">
+		<div itemprop="articleBody">
+				<div id="fb-root">&nbsp;</div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div align="center">
+<div class="fb-page" data-adapt-container-width="true" data-height="395" data-hide-cover="false" data-href="https://www.facebook.com/smccph" data-show-facepile="false" data-show-posts="true" data-small-header="false" data-width="640">
+<div class="fb-xfbml-parse-ignore">
+<blockquote cite="https://www.facebook.com/smccph"><a href="https://www.facebook.com/smccph">Sound and Music Computing - Copenhagen</a></blockquote>
+</div>
+</div>
+</div>
+</div>
+		</div>
+</div>
+
+    </div>
+
+    <div class="spotCon grid g4">
+
+    </div>
+     <div class="clear cleargrid"></div>
+</div></div>
+            <!-- end wrapper in Main --></div>
+        <!-- end Main --><div class="push"></div>
+    </div>
+    <!--  end stickyFooter --><!--  Footer --><div class="footer spotCon section">
+ <div class="footerArrow"></div>
+ <div class="footerInner" style="display: none;">
+  <div class="wrapper">
+   <div class="section ">
+    <div class="spotCon grid g4">
+     <div itemscope="" itemtype="http://schema.org/EducationalOrganization">
+      <div class="box white">
+       <p class="h2">Contact AAU</p>
+       <p class="h3"><span itemprop="name">Aalborg University</span></p>
+       <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"> <span itemprop="streetAddress">Fredrik Bajers Vej 5</span><br> P.O. Box 159 <span itemprop="postalCode">DK-9100</span> <span itemprop="addressLocality">Aalborg<br> Denmark</span><br> Phone: <span itemprop="telephone">+45 9940 9940</span><p></p> <p>Mail: <span itemprop="email"><a href="mailto:aau@aau.dk">aau@aau.dk</a></span><br> CVRnr: 29102384<br> Eannr: <a class="none" href="https://www.okonomi.aau.dk/digitalAssets/127/127219_ean--master--15112017--litl-kopi-.pdf" target="_blank">EAN</a></p> <p><a href="https://www.en.aau.dk/privacy-policy-cookies">Privacy and use of cookies</a></p> </span>
+      </div>
+     </div>
+    </div>
+    <div class="spotCon grid g4">
+     <div class="box white">
+      <h2>About AAU</h2>
+      <ul class="unstyled">
+       <li><a href="https://www.en.aau.dk/about-aau/profile" class="inlineBlock hasArrow h3" title="Aalborg University Profile"> Aalborg University Profile</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/organisation-management" class="inlineBlock hasArrow h3" title="Organisation and Management"> Organisation and Management</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/figures-facts" class="inlineBlock hasArrow h3" title="AAU in figures and facts"> AAU in figures and facts</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/strategy-vision-mission" class="inlineBlock hasArrow h3" title="Strategy, mission and vision"> Strategy, mission and vision</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/strategy-vision-mission/quality-assurance" class="inlineBlock hasArrow h3" title="Quality assurance of Study Programmes"> Quality assurance of Study Programmes</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/aalborg-model-problem-based-learning" class="inlineBlock hasArrow h3" title="The Aalborg Model for Problem Based Learning"> The Aalborg Model for Problem Based Learning</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/international-cooperation" class="inlineBlock hasArrow h3" title="International Cooperation"> International Cooperation</a> </li>
+       <li><a href="https://www.en.aau.dk/about-aau/history-honorary-doctors-fellows" class="inlineBlock hasArrow h3" title="History, Honorary Doctors and Fellows"> History, Honorary Doctors and Fellows</a> </li>
+      </ul>
+     </div>
+    </div>
+    <div class="spotCon grid g4">
+     <div class="box white">
+      <h2>Find us on social media</h2>
+      <ul class="unstyled">
+       <li><a href="https://www.facebook.com/InternationalOfficeAalborgUniversity" class="inlineBlock hasArrow h3" title="Facebook"> Facebook</a> </li>
+       <li><a href="https://www.youtube.com/aalborguniversitet" class="inlineBlock hasArrow h3" title="YouTube"> YouTube</a> </li>
+      </ul>
+     </div>
+    </div>
+    <div class="clear cleargrid"></div>
+   </div>
+  </div>
+ </div>
+</div><!--  end Footer --><!--  CookieNotification --><div class="cookieNotification color hidden">
+        <div class="wrapper">
+            <div class="section">
+                <div class="spotCon grid g8">
+                    <div class="box color"><h2>aau.dk uses cookies</h2><p>aau.dk uses cookies in order to generate usage statistics</p><p>You can read about our usage of your data and how to block cookies in <a href="https://www.aau.dk/om-cookies">the AAU cookie policy</a>.</p></div>
+                </div>
+
+                <div class="spotCon grid g4">
+                    <div class="box color"><p><a href="https://www.smc.aau.dk/" class="cookieAccept smallButton x">Close this message</a></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  end CookieNotification --><script type="text/javascript" src="Sound-and-Music-Computing-filer/jquery_002.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/jquery_005.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/jquery.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/selectivizr.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/jquery_004.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/waypoint.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/modernizr.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/jquery_003.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/print.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/script.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/jquery_006.js"></script>
+    <script type="text/javascript" src="Sound-and-Music-Computing-filer/studyGuideSearch.js"></script>
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: false,
+				width		: "70%",
+				height		: "70%",
+				helpers : {
+			        overlay : {
+			            css : {
+			                "background" : "rgba(0, 0, 0, 0.5)"
+			            }
+			        }
+			    }
+			});
+		});
+	</script>
+
+
+
+</body></html>
