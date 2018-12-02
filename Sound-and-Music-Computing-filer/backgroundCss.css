@@ -4,7 +4,7 @@
 
 .bg-img {
 	position: fixed;
-        background: src="Sound-and-Music-Computing-filer/88790_spilled--se.jpg";
+        background: url("Sound-and-Music-Computing-filer/88790_spilled--se.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
