@@ -1,4 +1,4 @@
-/* Custom-colors 
+/* Custom-colors
 	Primary color: #b70d32;
 	Secondary color: #fd5c81;
 	Text color: #b70d32;
@@ -17,12 +17,12 @@ blockquote {
 }
 
 .color a:hover {
-  color: #fd5c81;
+  color: #FBC5D3;
 }
 
 /* smallButton colors */
 .smallButton:after,
-.smallButton, 
+.smallButton,
 .pagination a {
 	color: #b70d32;
 }
@@ -31,7 +31,7 @@ blockquote {
 .color .smallButton:hover:after,
 .color .pagination a:hover
 	{
-	color: #fd5c81;
+	color: #FBC5D3;
 }
 
 /* Input fields*/
@@ -39,7 +39,7 @@ blockquote {
 	border-color: #b70d32;
 }
 
-/* fade */ 
+/* fade */
 .color .fade:after {
 	/* Gradient in browsers */
 	background: -moz-linear-gradient(top,  rgba(183,13,50,0) 72%, rgba(183,13,50,1) 100%);
@@ -49,4 +49,3 @@ blockquote {
 	background: -ms-linear-gradient(top,  rgba(183,13,50,0) 72%,rgba(183,13,50,1) 100%);
 	background: linear-gradient(top,  rgba(183,13,50,0) 72%,rgba(183,13,50,1) 100%);
 }
-
